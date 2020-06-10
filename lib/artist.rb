@@ -31,7 +31,7 @@ class Artist
   end
   
   def print_songs
-    @songs. do |song| 
+    @songs.all do |song| 
       puts song.name
     end
   end  
