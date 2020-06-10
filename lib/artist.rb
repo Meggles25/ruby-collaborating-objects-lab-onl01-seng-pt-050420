@@ -31,10 +31,9 @@ class Artist
   end
   
   def print_songs
-    @songs.all do |song| 
+    current_songs = Song.all.select {|song| song.artist == self}
+    current_songs.each do |song|
       puts song.name
     end
-  end  
-end  
-
-    
+  end
+end
